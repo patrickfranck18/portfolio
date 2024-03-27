@@ -1,0 +1,105 @@
+<main>
+    <article>
+
+      <!-- 
+        - #CONTACT
+        action="javascript:void(0)" (submit)="send()"
+      -->
+
+      <section class="section contact has-bg-image" aria-labelledby="contact-label"
+        style="background-image: url('./assets/images/contact-bg.png')">
+        <div class="container">
+
+          <form [formGroup]="contactForm" (ngSubmit)="send()" class="contact-form" >
+
+            <h2 class="headline-sm" id="contact-label">Contactez moi</h2>
+
+            <p class="contact-text body-md">
+              Pour toutes collaborations 
+            </p>
+
+            <div class="wrapper">
+
+              <div>
+                <label for="name" class="label">Nom</label>
+
+                <input type="text" name="name" id="name" placeholder="Nom complet *" required class="input-field" formControlName="from_name">
+              </div>
+
+              <div>
+                <label for="email" class="label">Votre Email </label>
+
+                <input type="email" name="email" id="email" placeholder="Email *" required class="input-field" formControlName="from_email">
+              </div>
+
+            </div>
+
+            <label for="subject" class="label">Sujet</label>
+            <input type="text" name="subject" id="subject" placeholder="Sujet *" class="input-field" formControlName="subject">
+
+            <label for="message" class="label">Votre message </label>
+            <textarea name="message" id="message" placeholder="Votre message *" required class="input-field" formControlName="message"></textarea>
+
+            <button class="btn btn-tertiary" type="submit" >Envoyer</button>
+
+          </form>
+
+
+          <div class="contact-content">
+
+            <ul class="contact-list">
+
+              <li class="contact-item">
+
+                <div class="item-icon" style="background-color: hsl(177, 39%, 72%)">
+                  <ion-icon name="call" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <p class="label-lg">Téléphone</p>
+
+                  <a href="#" class="body-lg">+21626792805</a>
+                </div>
+
+              </li>
+
+              <li class="contact-item">
+
+                <div class="item-icon" style="background-color: hsl(41, 99%, 64%)">
+                  <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <p class="label-lg">Mail</p>
+
+                  <a href="#" class="body-lg">franckpatick18@gmail.com</a>
+                </div>
+
+              </li>
+
+              <li class="contact-item">
+
+                <div class="item-icon" style="background-color: hsl(19, 97%, 85%)">
+                  <ion-icon name="location" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <p class="label-lg">Localisation</p>
+
+                  <address class="body-lg">
+                    Tunis,
+                    Tunisie
+                  </address>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
